@@ -1,0 +1,49 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2022-03-20T10:55:17.2376868Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2022-03-20T11:47:26.9214887Z"
+    }
+  },
+  "parameters": {
+    "MVCGPElektra22.subscriptionId": {
+      "Name": "MVCGPElektra22.subscriptionId",
+      "Type": "subscription",
+      "Value": "71da84b1-69c3-4aa0-bb14-ce104fed983a"
+    },
+    "MVCGPElektra22.resourceName": {
+      "Name": "MVCGPElektra22.resourceName",
+      "Type": null,
+      "Value": "MVCGPElektra22"
+    },
+    "MVCGPElektra22.resourceGroupName": {
+      "Name": "MVCGPElektra22.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "ElektraWeb"
+    },
+    "MVCGPElektra22.resourceGroupLocation": {
+      "Name": "MVCGPElektra22.resourceGroupLocation",
+      "Type": null,
+      "Value": "eastus"
+    },
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "71da84b1-69c3-4aa0-bb14-ce104fed983a"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "ElektraWeb"
+    },
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "71da84b1-69c3-4aa0-bb14-ce104fed983a"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MVCGP.Models.Semanas>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Crear nuevo Plazo</a>
+</p>
+<table class="table text-center">
+    <thead>
+        <tr>
+            
+            <td>
+                @Html.DisplayNameFor(model => model.Plazoss)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.TasaP)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.TasaN)
+            </td>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Plazoss)
+            </td>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.TasaP)
+            </td>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.TasaN)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit"></i></a>
+                <a asp-action="Delete" asp-route-id="@item.Id"><i class="far fa-trash-alt"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

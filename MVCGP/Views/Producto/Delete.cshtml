@@ -1,0 +1,37 @@
+﻿@model MVCGP.Models.Producto
+
+@{
+    ViewData["Title"] = "Borrar";
+}
+
+<h3>Deseas borrar?</h3>
+<div>
+    <h4>Producto</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KeyProduct)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KeyProduct)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.nombreProducto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.nombreProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PrecioProducto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PrecioProducto)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Borrar" class="btn btn-warning" /> |
+        <a asp-action="Index">Regresar</a>
+    </form>
+</div>

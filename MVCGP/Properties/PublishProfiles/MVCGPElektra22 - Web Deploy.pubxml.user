@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este archivo se usa en el proceso de publicación y empaquetado del proyecto web. Para personalizar el comportamiento de este proceso,
+edite el archivo MSBuild. Visite https://go.microsoft.com/fwlink/?LinkID=208121 para obtener más información. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA49C2ARWYDkqRlK+o6WGJ9wAAAAACAAAAAAAQZgAAAAEAACAAAAB6cmXi1ctupWa/svvpRS9tEOAurDJ0HT7jvUvofbO/lQAAAAAOgAAAAAIAACAAAAD/el8i7hKyGCdQD+7BeI6pmky+PNXmAmlEqIg4f/KL2IAAAACXx5+mJgGPcvn/IW5YMjRUgSn7zSbvlWVvQgInZkGqfyYazOMkTKn7p9SFhw/uot4m5Y4Z3fx/lpIxumyJ3pt2FItes6FJRsQjUalFMgYGXpfJtZaBUWvLezbeXOASCpplaiKk2Pmr03CTvYNM9ldXS9YIDxAJTuFvsXspTv5O2UAAAAATLcLPx3yhjM+M6/4fWq5sXMVMAtzgEe0RGwUmIhXajSFOGPKr2Zx1H6cgvq0KTu6uP2qEzfJknOhRqtCufZCM</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <AzureDBConnectionStrings Include="Data Source=tcp:mvcgpdbserver.database.windows.net,1433;Initial Catalog=MVCGP;User Id=Abel@mvcgpdbserver;Password=14abelNO" />
+    <AzureDBConnectionStrings Include="Data Source=tcp:mvcgpdbserver.database.windows.net,1433;Initial Catalog=MVCGP_db;User Id=abel@mvcgpdbserver;Password=14abelNO" />
+  </ItemGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="MVCGPContext">
+      <Value>Data Source=tcp:mvcgpdbserver.database.windows.net,1433%3bInitial Catalog=Elektra%3bUser Id=abel%40mvcgpdbserver%3bPassword=14abelNO</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="MVCGP.Data.MVCGPContext">
+      <Value>Data Source=tcp:mvcgpdbserver.database.windows.net,1433%3bInitial Catalog=MVCGP%3bUser Id=Abel%40mvcgpdbserver%3bPassword=14abelNO</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

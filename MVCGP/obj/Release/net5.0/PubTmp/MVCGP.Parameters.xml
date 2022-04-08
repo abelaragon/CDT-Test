@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="MVCGPElektra22" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\AbelMñz\\source\\repos\\respow\\Respaldo-Salinas\ -\ copia\\MVCGP\\MVCGP\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="MVCGP.Data.MVCGPContext" description="" value="Data Source=tcp:mvcgpdbserver.database.windows.net,1433;Initial Catalog=MVCGP;User Id=Abel@mvcgpdbserver;Password=14abelNO" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\AbelMñz\\source\\repos\\respow\\Respaldo-Salinas\ -\ copia\\MVCGP\\MVCGP\\obj\\Release\\net5\.0\\PubTmp\\EFSQLScripts\\MVCGP\.Data\.MVCGPContext\.sql$" />
+  </parameter>
+</parameters>

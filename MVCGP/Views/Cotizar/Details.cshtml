@@ -1,0 +1,27 @@
+﻿@model MVCGP.Models.Cotizar
+
+@{
+    ViewData["Title"] = "Detalles";
+}
+<div>
+    <h4>Cotizar</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Producto)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Producto.nombreProducto)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Semanas)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Semanas.Id)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Regresar</a>
+</div>

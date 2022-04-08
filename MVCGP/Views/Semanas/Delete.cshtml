@@ -1,0 +1,43 @@
+﻿@model MVCGP.Models.Semanas
+
+@{
+    ViewData["Title"] = "Borrar";
+}
+
+<h3>Seguro que lo quieres borrar?</h3>
+<div>
+    <h4>Semanas</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KeySemana)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KeySemana)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Plazoss)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Plazoss)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TasaP)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TasaP)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TasaN)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TasaN)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> |
+        <a asp-action="Index">Regresar</a>
+    </form>
+</div>

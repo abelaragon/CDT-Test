@@ -1,0 +1,87 @@
+﻿@model IEnumerable<MVCGP.Models.Cotizar>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Cotizar nuevo producto</a>
+</p>
+<table class="table text-center">
+    <thead>
+        <tr>
+            <td>
+                <h6>Producto</h6>
+            </td>
+            <td>
+                <h6>Precio Producto</h6>
+            </td>
+            <td>
+                <h6>Plazos</h6>
+            <td>
+                <h6>Tasa Puntual</h6>
+            </td>
+            <td>
+                <h6>Tasa Normal</h6>
+            </td>
+            <td>
+                <h6>Abono Puntual</h6>
+            </td>
+            <td>
+                <h6>Abono Normal</h6>
+              
+
+            </td>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            decimal AbonoN = 0;
+            decimal AbonoP = 0;
+        }
+
+        @foreach (var item in Model)
+        {
+            AbonoN = (decimal)(item.Semanas.TasaN * item.Producto.PrecioProducto + item.Producto.PrecioProducto) / item.Semanas.Plazoss;
+            AbonoP = (decimal)(item.Semanas.TasaP * item.Producto.PrecioProducto + item.Producto.PrecioProducto) / item.Semanas.Plazoss;
+        <tr>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Producto.nombreProducto)
+            </td>
+            <td class="text-center">
+                @String.Format("{0:C}", item.Producto.PrecioProducto)
+               
+            </td>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Semanas.Plazoss)
+            </td>
+            <td class="text-center">
+                @String.Format("{0:C}", item.Semanas.TasaP)
+                
+            </td>
+            <td class="text-center">
+                @String.Format("{0:C}", item.Semanas.TasaN)
+                
+            </td>
+
+            <td  class="text-center">
+                @String.Format("{0:C}", AbonoP)
+
+              </td>
+                
+            <td>
+                @String.Format("{0:C}", AbonoN)
+            </td>
+
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit"></i></a>
+
+            </td>
+        </tr>
+        }
+
+    </tbody>
+</table>
+

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MVCGP.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create" class="btn btn-warning btn-ms" role="button">Crear un Producto</a>
+</p>
+<table class="table text-center">
+    <thead>
+        <tr>
+            <td >
+                @Html.DisplayNameFor(model => model.KeyProduct)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.nombreProducto)
+            </td>
+            <td>
+                @Html.DisplayNameFor(model => model.PrecioProducto)
+            </td>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.KeyProduct)
+            </td>
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.nombreProducto)
+            </td>
+            <td class="text-center">
+                @String.Format("{0:C}", item.PrecioProducto)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-edit"></i></a> 
+              
+                <a asp-action="Delete" asp-route-id="@item.Id"><i class="far fa-trash-alt"></i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
